@@ -7,7 +7,7 @@ import {
   UserButton,
 } from "@clerk/nextjs";
 import Link from "next/link";
-import {Map, Sparkle, MessagesSquare} from "lucide-react";
+import {Map, Sparkle, MessagesSquare, Shield} from "lucide-react";
 import {ThemeToggle} from "@/components/ui/theme-toogle";
 import {Button} from "@/components/ui/button";
 
@@ -32,6 +32,12 @@ const Navbar = () => {
                         <MessagesSquare className={'h-4 w-4'}/>
                         Feedback
                     </Link>
+                    <SignedIn>
+                        <Link href={'/admin'} className={'text-sm hover:text-primary transition-colors flex items-center'}>
+                            <Shield className={'h-4 w-4'}/>
+                            Admin
+                        </Link>
+                    </SignedIn>
                 </div>
 
                 <div className={'flex items-center gap-4'}>
